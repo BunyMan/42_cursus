@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbuny-fe <jbuny-fe@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: rtulchiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 17:23:50 by jbuny-fe          #+#    #+#             */
-/*   Updated: 2022/03/29 17:50:39 by jbuny-fe         ###   ########.fr       */
+/*   Created: 2017/10/29 18:40:47 by rtulchiy          #+#    #+#             */
+/*   Updated: 2017/11/05 13:08:09 by rtulchiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "libft.h"
 
-# define BUFFERSIZE 1024
+char	*ft_strnew(size_t size)
+{
+	char	*str;
+	long	i;
 
-
+	i = (long)size;
+	if (!(str = (char*)malloc(size + 1)))
+		return (0);
+	while (i >= 0)
+		str[i--] = 0;
+	return (str);
+}
