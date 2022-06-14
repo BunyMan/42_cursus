@@ -8,3 +8,5 @@ get_next_line -> 125
 printf -> 100
 
 push_swap -> 105
+
+minitalk -> 125
