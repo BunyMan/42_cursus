@@ -22,17 +22,14 @@ all : $(SERVER) $(CLIENT)
 		@sleep 0.8
 
 $(SERVER) : server.o utils.o utils2.o
-<<<<<<< HEAD
 	@$(CC) server.o utils.c utils2.c -o $(SERVER)
 
 $(CLIENT) : client.o utils.o utils2.o
 	@$(CC) client.o utils.c utils2.c -o $(CLIENT)
-=======
 	@$(CC) $(FLAGS) server.o utils.c utils2.c -o $(SERVER)
 
 $(CLIENT) : client.o utils.o utils2.o
 	@$(CC) $(FLAGS) client.o utils.c utils2.c -o $(CLIENT)
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 
 %.o : %.c
 	@$(CC) $(FLAGS) $< -c -I minitalk.h
@@ -62,11 +59,8 @@ ap: all fclean
 		@printf "\n"
 		@printf "					   $(RESET) @BunyMan									 \n"
 		@printf "							        $(O).:::::::::::::::::::::::::::::::::::::::::::.  $(RESET)      \n"
-<<<<<<< HEAD
 		@printf "							       $(O)~777??77777777??77???777777777777777777??777?7\  $(RESET)    \n"
-=======
 		@printf "							       $(O)~777??77777777??77???77777777777777777777777?7\  $(RESET)    \n"
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 		@printf "			      :~!77!~^.      .~~~             $(O).??77!77777777777777777777777777777777777777777?~   $(RESET)   \n"
 		@printf "			   ^YB&@@@&@@@@P!    7@@@^  !5G.      $(O).77?~    ?7777777777777777777777!.  .7777777777?!   $(RESET)   \n"
 		@printf "			  Y&@&P7^^:^!5@@@P          J@@&      $(O).77?~    ??77777777??77777777???!   .7?77777777?!   $(RESET)   \n"
@@ -82,12 +76,9 @@ ap: all fclean
 
 		@afplay includes/github.mp3
 
-<<<<<<< HEAD
 colors:
 		./includes/teste.sh
 
-=======
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 animations: git
 
 .PHONY: all clean fclean re

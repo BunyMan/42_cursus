@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_client.c                                      :+:      :+:    :+:   */
+/*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbuny-fe <jbuny-fe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 20:56:11 by jbuny-fe          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/05/26 10:11:14 by jbuny-fe         ###   ########.fr       */
-=======
+/*   Updated: 2022/11/18 17:05:21 by jbuny-fe         ###   ########.fr       */
 /*   Updated: 2022/05/26 11:34:16 by jbuny-fe         ###   ########.fr       */
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-<<<<<<< HEAD
 #include "stdlib.h"
-=======
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 
 static void	ft_sigaction_(int sig)
 {
@@ -28,11 +22,8 @@ static void	ft_sigaction_(int sig)
 		++i;
 	else
 	{
-<<<<<<< HEAD
 		ft_putstr_fd("Received: ", 1);
-=======
 		ft_putstr_fd("Character(s) received: ", 1);
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 		ft_putnbr_fd(i, 1);
 		ft_putstr_fd("\n", 1);
 		exit(0);
@@ -74,30 +65,24 @@ int	main(int ac, char **av)
 
 	if (ac != 3)
 	{
-<<<<<<< HEAD
 		ft_putstr_fd("Invalid argument count, please provide only PID and message\n", 1);
-=======
 		ft_putstr_fd("Invalid argument, provide only PID and message\n", 1);
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 		return (0);
 	}
 	i = -1;
 	while (av[1][++i])
 	{
 		if (ft_isdigit(av[1][i]) == 0)
-<<<<<<< HEAD
 			ft_putstr_fd("Please provide a valid PID (only numbers) and try again\n", 1);
 			return (0);
 	}
 	ft_putstr_fd("Sent    : ", 1);
-=======
 		{	
 			ft_putstr_fd("Please provide a valid PID and try again\n", 1);
 			return (0);
 		}
 	}
 	ft_putstr_fd("Character(s) sent: ", 1);
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
 	ft_putnbr_fd(ft_strlen(av[2]), 1);
 	ft_putchar_fd('\n', 1);
 	s_sigaction.sa_handler = ft_sigaction_;
@@ -107,7 +92,3 @@ int	main(int ac, char **av)
 	send_msg((int)ft_atoi(av[1]), av[2]);
 	return (0);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> a8452498e625bbb3b411135b5c700aced805b666
