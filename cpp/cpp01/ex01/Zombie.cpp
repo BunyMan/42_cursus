@@ -5,7 +5,7 @@ Zombie::Zombie(void) {
 }
 
 Zombie::~Zombie(void) {
-    std::cout << "Zombie " << name << " destructor called" << std::endl;
+    std::cout << "Zombie destructor called" << std::endl;
     return ;
 }
 
@@ -15,6 +15,6 @@ void    Zombie::setName(std::string const &zombieName) {
 }
 
 void    Zombie::announce(void) {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
     return ;
 }
